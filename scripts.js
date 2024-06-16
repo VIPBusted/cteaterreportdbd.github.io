@@ -95,25 +95,4 @@ document.getElementById('cheaterForm').addEventListener('submit', function(event
     this.reset(); // Formular zurücksetzen
 });
 
-// Funktion zum Hinzufügen eines Berichts zur Liste im HTML
-function addReportToList(report) {
-    const reportList = document.getElementById('reportList');
-    const listItem = document.createElement('li');
-    listItem.textContent = `Spielername: ${report.playerName} | Plattform: ${report.platform} | Cheat: ${report.cheatDescription} | Datum: ${report.date}`;
-    reportList.appendChild(listItem);
-}
-
-// Funktion zum Speichern eines Berichts in localStorage
-function saveReport(report) {
-    let reports = JSON.parse(localStorage.getItem('cheaterReports')) || [];
-    reports.push(report);
-    localStorage.setItem('cheaterReports', JSON.stringify(reports));
-}
-
-// Funktion zum Laden gespeicherter Berichte beim Laden der Seite
-function loadReports() {
-    const reports = JSON.parse(localStorage.getItem('cheaterReports')) || [];
-    reports.forEach(report => addReportToList(report));
-}
-
-document.addEventListener('DOMContentLoaded', loadReports); // Gespeicherte Berichte beim Laden der Seite laden
+// Funktion zum Hinz
