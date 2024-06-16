@@ -87,6 +87,11 @@ footer {
     margin: 0 0.5rem;
 }
 
+#socialMediaLinks a img {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
 #socialMediaLinks a:hover {
     text-decoration: underline;
 }
