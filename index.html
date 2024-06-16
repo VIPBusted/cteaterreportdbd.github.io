@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dead by Daylight Cheater data base</title>
+    <title>Dead by Daylight Cheater melden</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1 id="title">Dead by Daylight Cheater melden</h1>
-        <select id="languageSelect" onchange="changeLanguage()">
+        <select id="languageSelect">
             <option value="de">Deutsch</option>
             <option value="en">English</option>
             <option value="es">Español</option>
@@ -58,15 +58,5 @@
     </footer>
 
     <script src="scripts.js"></script>
-
-    <script>
-        function changeLanguage() {
-            var select = document.getElementById("languageSelect");
-            var language = select.options[select.selectedIndex].value;
-
-            // Beispiel: Hier könnten Sie die Sprache ändern oder weiterverarbeiten
-            console.log("Sprache geändert auf: " + language);
-        }
-    </script>
 </body>
 </html>
