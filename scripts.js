@@ -1,3 +1,35 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const initialLanguage = 'de'; // Standardmäßig Deutsch auswählen
+    updateTexts(initialLanguage); // Initialisiere die Texte
+
+    // Eventlistener für die Änderung der Sprache hinzufügen
+    document.getElementById('languageSelect').addEventListener('change', function(event) {
+        const language = event.target.value;
+        updateTexts(language); // Aktualisiere die Texte entsprechend der ausgewählten Sprache
+    });
+
+    function updateTexts(language) {
+        const texts = translations[language];
+
+        // Überprüfen, ob die Sprache im translations-Objekt vorhanden ist
+        if (!texts) {
+            console.error(`Übersetzung für Sprache '${language}' nicht verfügbar.`);
+            return;
+        }
+
+        // Elemente im DOM aktualisieren
+        document.getElementById('title').textContent = texts.title;
+        document.getElementById('reportTitle').textContent = texts.reportTitle;
+        document.getElementById('playerNameLabel').textContent = texts.playerNameLabel;
+        document.getElementById('platformLabel').textContent = texts.platformLabel;
+        document.getElementById('cheatDescriptionLabel').textContent = texts.cheatDescriptionLabel;
+        document.getElementById('submitButton').textContent = texts.submitButton;
+        document.getElementById('reportsTitle').textContent = texts.reportsTitle;
+        document.getElementById('thankYouText').textContent = texts.thankYouText;
+    }
+});
+
+// Übersetzungen für verschiedene Sprachen
 const translations = {
     de: {
         title: "Dead by Daylight Cheater melden",
@@ -17,7 +49,7 @@ const translations = {
         cheatDescriptionLabel: "Cheat Description:",
         submitButton: "Report",
         reportsTitle: "Reported Cheaters",
-        thankYouText: "Special thanks to the only Real Kuriboh And MakerErbauer2"
+        thankYouText: "Special thanks to the only Real Kuriboh And MakerErbauer2!"
     },
     es: {
         title: "Reportar tramposo de Dead by Daylight",
@@ -27,7 +59,7 @@ const translations = {
         cheatDescriptionLabel: "Descripción del truco:",
         submitButton: "Reportar",
         reportsTitle: "Tramposos reportados",
-        thankYouText: "Special thanks to the only Real Kuriboh And MakerErbauer2"
+        thankYouText: "Special thanks to the only Real Kuriboh And MakerErbauer2!"
     },
     fr: {
         title: "Signaler un tricheur de Dead by Daylight",
@@ -37,33 +69,6 @@ const translations = {
         cheatDescriptionLabel: "Description de la triche:",
         submitButton: "Signaler",
         reportsTitle: "Tricheurs signalés",
-        thankYouText: "Special thanks to the only Real Kuriboh And MakerErbauer2"
+        thankYouText: "Special thanks to the only Real Kuriboh And MakerErbauer2!"
     }
 };
-
-document.getElementById('languageSelect').addEventListener('change', function(event) {
-    const language = event.target.value;
-    const texts = translations[language];
-
-    document.getElementById('title').textContent = texts.title;
-    document.getElementById('reportTitle').textContent = texts.reportTitle;
-    document.getElementById('playerNameLabel').textContent = texts.playerNameLabel;
-    document.getElementById('platformLabel').textContent = texts.platformLabel;
-    document.getElementById('cheatDescriptionLabel').textContent = texts.cheatDescriptionLabel;
-    document.getElementById('submitButton').textContent = texts.submitButton;
-    document.getElementById('reportsTitle').textContent = texts.reportsTitle;
-    document.getElementById('thankYouText').textContent = texts.thankYouText;
-});
-
-// Beispiel für die Initialisierung der Sprache (z.B. auf Deutsch)
-const initialLanguage = 'de';
-const initialTexts = translations[initialLanguage];
-
-document.getElementById('title').textContent = initialTexts.title;
-document.getElementById('reportTitle').textContent = initialTexts.reportTitle;
-document.getElementById('playerNameLabel').textContent = initialTexts.playerNameLabel;
-document.getElementById('platformLabel').textContent = initialTexts.platformLabel;
-document.getElementById('cheatDescriptionLabel').textContent = initialTexts.cheatDescriptionLabel;
-document.getElementById('submitButton').textContent = initialTexts.submitButton;
-document.getElementById('reportsTitle').textContent = initialTexts.reportsTitle;
-document.getElementById('thankYouText').textContent = initialTexts.thankYouText;
