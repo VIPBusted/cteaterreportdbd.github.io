@@ -46,7 +46,8 @@ const translations = {
         platformLabel: "Plattform:",
         cheatDescriptionLabel: "Beschreibung des Cheats:",
         submitButton: "Melden",
-        reportsTitle: "Gemeldete Cheater"
+        reportsTitle: "Gemeldete Cheater",
+        thankYouText: "Vielen Dank für Ihre Hilfe, Dead by Daylight zu einem besseren Spiel zu machen!"
     },
     en: {
         title: "Report Dead by Daylight Cheater",
@@ -55,7 +56,8 @@ const translations = {
         platformLabel: "Platform:",
         cheatDescriptionLabel: "Cheat Description:",
         submitButton: "Report",
-        reportsTitle: "Reported Cheaters"
+        reportsTitle: "Reported Cheaters",
+        thankYouText: "Thank you for helping to make Dead by Daylight a better game!"
     },
     es: {
         title: "Reportar tramposo de Dead by Daylight",
@@ -64,7 +66,8 @@ const translations = {
         platformLabel: "Plataforma:",
         cheatDescriptionLabel: "Descripción del truco:",
         submitButton: "Reportar",
-        reportsTitle: "Tramposos reportados"
+        reportsTitle: "Tramposos reportados",
+        thankYouText: "¡Gracias por ayudar a que Dead by Daylight sea un mejor juego!"
     },
     fr: {
         title: "Signaler un tricheur de Dead by Daylight",
@@ -73,7 +76,8 @@ const translations = {
         platformLabel: "Plateforme:",
         cheatDescriptionLabel: "Description de la triche:",
         submitButton: "Signaler",
-        reportsTitle: "Tricheurs signalés"
+        reportsTitle: "Tricheurs signalés",
+        thankYouText: "Merci d'aider à faire de Dead by Daylight un meilleur jeu!"
     }
 };
 
@@ -88,4 +92,5 @@ document.getElementById('languageSelect').addEventListener('change', function(ev
     document.getElementById('cheatDescriptionLabel').textContent = texts.cheatDescriptionLabel;
     document.getElementById('submitButton').textContent = texts.submitButton;
     document.getElementById('reportsTitle').textContent = texts.reportsTitle;
+    document.getElementById('thankYouText').textContent = texts.thankYouText;
 });
