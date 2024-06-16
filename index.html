@@ -1,53 +1,32 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dead by Daylight Cheater melden</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Cheater</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1 id="title">Dead by Daylight Cheater melden</h1>
-        <select id="languageSelect">
-            <option value="de">Deutsch</option>
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-        </select>
-    </header>
-    <main>
-        <section id="report-form">
-            <h2 id="reportTitle">Cheater melden</h2>
-            <form id="cheaterForm">
-                <label for="playerName" id="playerNameLabel">Spielername:</label>
-                <input type="text" id="playerName" name="playerName" required>
-
-                <label for="platform" id="platformLabel">Plattform:</label>
-                <select id="platform" name="platform" required>
-                    <option value="PC">PC</option>
-                    <option value="PS4">PS4</option>
-                    <option value="PS5">PS5</option>
-                    <option value="Xbox">Xbox</option>
-                    <option value="Switch">Switch</option>
-                </select>
-
-                <label for="cheatDescription" id="cheatDescriptionLabel">Beschreibung des Cheats:</label>
-                <textarea id="cheatDescription" name="cheatDescription" required></textarea>
-
-                <button type="submit" id="submitButton">Melden</button>
-            </form>
-        </section>
-
-        <section id="reports">
-            <h2 id="reportsTitle">Gemeldete Cheater</h2>
-            <ul id="reportList"></ul>
-        </section>
-    </main>
-
-    <footer>
-        <p id="thankYouText">Vielen Dank für Ihre Hilfe, Dead by Daylight zu einem besseren Spiel zu machen!</p>
-        <div id="socialMediaLinks">
+  <div class="container">
+    <h1>Report Cheater</h1>
+    <form id="reportForm">
+      <label for="username">Player Username:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="game">Game Title:</label>
+      <input type="text" id="game" name="game" required>
+      
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+      
+      <label for="evidence">Evidence (optional):</label>
+      <input type="file" id="evidence" name="evidence" accept="image/*, video/*">
+      
+      <button type="submit">Submit Report</button>
+    </form>
+  </div>
+  <footer>
+     <div id="socialMediaLinks">
             <a href="https://www.tiktok.com/@maychencb1907" target="_blank">
                 <img src="tiktoklogo.png" alt="TikTok" width="20" height="20"> Tiktok (From a good friend)
             </a> |
@@ -56,7 +35,7 @@
             </a>
         </div>
     </footer>
-
-    <script src="scripts.js"></script>
+  
+  <script src="script.js"></script>
 </body>
 </html>
