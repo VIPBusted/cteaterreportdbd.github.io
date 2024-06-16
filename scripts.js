@@ -1,43 +1,3 @@
-document.getElementById('cheaterForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const playerName = document.getElementById('playerName').value;
-    const platform = document.getElementById('platform').value;
-    const cheatDescription = document.getElementById('cheatDescription').value;
-
-    const report = {
-        playerName,
-        platform,
-        cheatDescription,
-        date: new Date().toLocaleString()
-    };
-
-    addReportToList(report);
-    saveReport(report);
-
-    this.reset();
-});
-
-function addReportToList(report) {
-    const reportList = document.getElementById('reportList');
-    const listItem = document.createElement('li');
-    listItem.textContent = `Spielername: ${report.playerName} | Plattform: ${report.platform} | Cheat: ${report.cheatDescription} | Datum: ${report.date}`;
-    reportList.appendChild(listItem);
-}
-
-function saveReport(report) {
-    let reports = JSON.parse(localStorage.getItem('cheaterReports')) || [];
-    reports.push(report);
-    localStorage.setItem('cheaterReports', JSON.stringify(reports));
-}
-
-function loadReports() {
-    const reports = JSON.parse(localStorage.getItem('cheaterReports')) || [];
-    reports.forEach(report => addReportToList(report));
-}
-
-document.addEventListener('DOMContentLoaded', loadReports);
-
 const translations = {
     de: {
         title: "Dead by Daylight Cheater melden",
@@ -47,7 +7,7 @@ const translations = {
         cheatDescriptionLabel: "Beschreibung des Cheats:",
         submitButton: "Melden",
         reportsTitle: "Gemeldete Cheater",
-         thankYouText:";Special thanks to the only Real Kuriboh And MakerErbauer2!
+        thankYouText: "Special thanks to the only Real Kuriboh And MakerErbauer2!"
     },
     en: {
         title: "Report Dead by Daylight Cheater",
@@ -57,7 +17,7 @@ const translations = {
         cheatDescriptionLabel: "Cheat Description:",
         submitButton: "Report",
         reportsTitle: "Reported Cheaters",
-        thankYouText:"Special thanks to the only Real Kuriboh And MakerErbauer2"
+        thankYouText: "Special thanks to the only Real Kuriboh And MakerErbauer2"
     },
     es: {
         title: "Reportar tramposo de Dead by Daylight",
@@ -67,7 +27,7 @@ const translations = {
         cheatDescriptionLabel: "Descripción del truco:",
         submitButton: "Reportar",
         reportsTitle: "Tramposos reportados",
-        thankYouText:"Special thanks to the only Real Kuriboh And MakerErbauer2"
+        thankYouText: "Special thanks to the only Real Kuriboh And MakerErbauer2"
     },
     fr: {
         title: "Signaler un tricheur de Dead by Daylight",
@@ -77,7 +37,7 @@ const translations = {
         cheatDescriptionLabel: "Description de la triche:",
         submitButton: "Signaler",
         reportsTitle: "Tricheurs signalés",
-        thankYouText:"Special thanks to the only Real Kuriboh And MakerErbauer2"
+        thankYouText: "Special thanks to the only Real Kuriboh And MakerErbauer2"
     }
 };
 
