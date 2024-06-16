@@ -1,4 +1,3 @@
-// scripts.js
 document.getElementById('cheaterForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
