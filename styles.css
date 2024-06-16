@@ -53,8 +53,6 @@ input, select, textarea {
     margin-top: 0.5rem;
     padding: 0.5rem;
     font-size: 1rem;
-    border: 1px solid #ddd; /* Hinzugefügt für eine klare Abgrenzung */
-    border-radius: 4px; /* Hinzugefügt für abgerundete Ecken */
 }
 
 button {
@@ -65,7 +63,6 @@ button {
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    border-radius: 4px; /* Hinzugefügt für abgerundete Ecken */
 }
 
 button:hover {
