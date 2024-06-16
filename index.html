@@ -8,33 +8,39 @@
 </head>
 <body>
     <header>
-        <h1>Dead by Daylight Cheater melden</h1>
+        <h1 id="title">Dead by Daylight Cheater melden</h1>
+        <select id="languageSelect">
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+        </select>
     </header>
     <main>
         <section id="report-form">
-            <h2>Cheater melden</h2>
+            <h2 id="reportTitle">Cheater melden</h2>
             <form id="cheaterForm">
-                <label for="playerName">Spielername:</label>
+                <label for="playerName" id="playerNameLabel">Spielername:</label>
                 <input type="text" id="playerName" name="playerName" required>
 
-                <label for="platform">Plattform:</label>
+                <label for="platform" id="platformLabel">Plattform:</label>
                 <select id="platform" name="platform" required>
                     <option value="PC">PC</option>
                     <option value="PS4">PS4</option>
-                    <option value="PS4">PS5</option>
+                    <option value="PS5">PS5</option>
                     <option value="Xbox">Xbox</option>
                     <option value="Switch">Switch</option>
                 </select>
 
-                <label for="cheatDescription">Beschreibung des Cheats:</label>
+                <label for="cheatDescription" id="cheatDescriptionLabel">Beschreibung des Cheats:</label>
                 <textarea id="cheatDescription" name="cheatDescription" required></textarea>
 
-                <button type="submit">Melden</button>
+                <button type="submit" id="submitButton">Melden</button>
             </form>
         </section>
 
         <section id="reports">
-            <h2>Gemeldete Cheater</h2>
+            <h2 id="reportsTitle">Gemeldete Cheater</h2>
             <ul id="reportList"></ul>
         </section>
     </main>
