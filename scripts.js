@@ -47,7 +47,7 @@ const translations = {
         cheatDescriptionLabel: "Beschreibung des Cheats:",
         submitButton: "Melden",
         reportsTitle: "Gemeldete Cheater",
-        thankYouText: "Vielen Dank für Ihre Hilfe, Dead by Daylight zu einem besseren Spiel zu machen!"
+         thankYouText:";Special thanks to the only Real Kuriboh And MakerErbauer2!
     },
     en: {
         title: "Report Dead by Daylight Cheater",
@@ -57,7 +57,7 @@ const translations = {
         cheatDescriptionLabel: "Cheat Description:",
         submitButton: "Report",
         reportsTitle: "Reported Cheaters",
-        thankYouText: "Thank you for helping to make Dead by Daylight a better game!"
+        thankYouText:"Special thanks to the only Real Kuriboh And MakerErbauer2"
     },
     es: {
         title: "Reportar tramposo de Dead by Daylight",
@@ -67,7 +67,7 @@ const translations = {
         cheatDescriptionLabel: "Descripción del truco:",
         submitButton: "Reportar",
         reportsTitle: "Tramposos reportados",
-        thankYouText: "¡Gracias por ayudar a que Dead by Daylight sea un mejor juego!"
+        thankYouText:"Special thanks to the only Real Kuriboh And MakerErbauer2"
     },
     fr: {
         title: "Signaler un tricheur de Dead by Daylight",
@@ -77,7 +77,7 @@ const translations = {
         cheatDescriptionLabel: "Description de la triche:",
         submitButton: "Signaler",
         reportsTitle: "Tricheurs signalés",
-        thankYouText: "Merci d'aider à faire de Dead by Daylight un meilleur jeu!"
+        thankYouText:"Special thanks to the only Real Kuriboh And MakerErbauer2"
     }
 };
 
