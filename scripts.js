@@ -54,3 +54,16 @@ document.getElementById('languageSelect').addEventListener('change', function(ev
     document.getElementById('reportsTitle').textContent = texts.reportsTitle;
     document.getElementById('thankYouText').textContent = texts.thankYouText;
 });
+
+// Beispiel für die Initialisierung der Sprache (z.B. auf Deutsch)
+const initialLanguage = 'de';
+const initialTexts = translations[initialLanguage];
+
+document.getElementById('title').textContent = initialTexts.title;
+document.getElementById('reportTitle').textContent = initialTexts.reportTitle;
+document.getElementById('playerNameLabel').textContent = initialTexts.playerNameLabel;
+document.getElementById('platformLabel').textContent = initialTexts.platformLabel;
+document.getElementById('cheatDescriptionLabel').textContent = initialTexts.cheatDescriptionLabel;
+document.getElementById('submitButton').textContent = initialTexts.submitButton;
+document.getElementById('reportsTitle').textContent = initialTexts.reportsTitle;
+document.getElementById('thankYouText').textContent = initialTexts.thankYouText;
