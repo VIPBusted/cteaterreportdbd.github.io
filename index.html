@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Report Cheater</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional styles specific to the cheater list */
+    .cheater-list {
+      margin-top: 20px;
+    }
+    .cheater-list ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .cheater-list li {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -13,16 +26,15 @@
       <label for="username">Player Username:</label>
       <input type="text" id="username" name="username" required>
       
-     <label for="platform">Platform:</label>
-<select id="platform" name="platform" required>
-  <option value="">Select Platform</option>
-  <option value="PC">PC</option>
-  <option value="PS4">PS4</option>
-  <option value="PS5">PS5</option>
-  <option value="Xbox">Xbox</option>
-  <option value="Switch">Switch</option>
-</select>
-
+      <label for="platform">Platform:</label>
+      <select id="platform" name="platform" required>
+        <option value="">Select Platform</option>
+        <option value="PC">PC</option>
+        <option value="PS4">PS4</option>
+        <option value="PS5">PS5</option>
+        <option value="Xbox">Xbox</option>
+        <option value="Switch">Switch</option>
+      </select>
       
       <label for="description">Description:</label>
       <textarea id="description" name="description" rows="4" required></textarea>
@@ -32,17 +44,26 @@
       
       <button type="submit">Submit Report</button>
     </form>
+    
+    <!-- Section to display reported cheaters -->
+    <div class="cheater-list">
+      <h2>Reported Cheaters</h2>
+      <ul id="cheaterList">
+        <!-- Cheaters will be dynamically added here using JavaScript -->
+      </ul>
+    </div>
   </div>
+  
   <footer>
-     <div id="socialMediaLinks">
-            <a href="https://www.tiktok.com/@maychencb1907" target="_blank">
-                <img src="tiktoklogo.png" alt="TikTok" width="20" height="20"> Tiktok (From a good friend)
-            </a> |
-            <a href="https://www.twitter.com/yourprofile" target="_blank">
-                <img src="twitter-logo.png" alt="Twitter" width="20" height="20"> My Twitter
-            </a>
-        </div>
-    </footer>
+    <div id="socialMediaLinks">
+      <a href="https://www.tiktok.com/@maychencb1907" target="_blank">
+        <img src="tiktoklogo.png" alt="TikTok" width="20" height="20"> Tiktok (From a good friend)
+      </a> |
+      <a href="https://www.twitter.com/yourprofile" target="_blank">
+        <img src="twitter-logo.png" alt="Twitter" width="20" height="20"> My Twitter
+      </a>
+    </div>
+  </footer>
   
   <script src="script.js"></script>
 </body>
