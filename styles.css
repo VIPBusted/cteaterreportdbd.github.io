@@ -72,3 +72,21 @@ li {
 li:last-child {
     border-bottom: none;
 }
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+#socialMediaLinks a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+#socialMediaLinks a:hover {
+    text-decoration: underline;
+}
