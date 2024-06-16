@@ -1,3 +1,4 @@
+// scripts.js
 document.addEventListener('DOMContentLoaded', () => {
     const initialLanguage = 'de'; // Standardmäßig Deutsch auswählen
     updateTexts(initialLanguage); // Initialisiere die Texte
