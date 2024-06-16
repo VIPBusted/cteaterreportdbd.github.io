@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead by Daylight Cheater melden</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dead by Daylight Cheater melden</h1>
+    </header>
+    <main>
+        <section id="report-form">
+            <h2>Cheater melden</h2>
+            <form id="cheaterForm">
+                <label for="playerName">Spielername:</label>
+                <input type="text" id="playerName" name="playerName" required>
+
+                <label for="platform">Plattform:</label>
+                <select id="platform" name="platform" required>
+                    <option value="PC">PC</option>
+                    <option value="PS4">PS4</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="Switch">Switch</option>
+                </select>
+
+                <label for="cheatDescription">Beschreibung des Cheats:</label>
+                <textarea id="cheatDescription" name="cheatDescription" required></textarea>
+
+                <button type="submit">Melden</button>
+            </form>
+        </section>
+
+        <section id="reports">
+            <h2>Gemeldete Cheater</h2>
+            <ul id="reportList"></ul>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
