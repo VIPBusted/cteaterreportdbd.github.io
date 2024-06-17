@@ -1,53 +1,43 @@
 // scripts.js
-document.addEventListener('DOMContentLoaded', () => {
-    loadReports();
+document.getElementById('cheaterForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    const initialLanguage = 'de';
-    updateTexts(initialLanguage);
+    const playerName = document.getElementById('playerName').value;
+    const platform = document.getElementById('platform').value;
+    const cheatDescription = document.getElementById('cheatDescription').value;
 
-    document.getElementById('languageSelect').addEventListener('change', function(event) {
-        const language = event.target.value;
-        updateTexts(language);
-    });
+    const report = {
+        playerName,
+        platform,
+        cheatDescription,
+        date: new Date().toLocaleString()
+    };
 
-    document.getElementById('cheaterForm').addEventListener('submit', function(event) {
-        event.preventDefault();
+    addReportToList(report);
+    saveReport(report);
 
-        const playerName = document.getElementById('playerName').value;
-        const platform = document.getElementById('platform').value;
-        const cheatDescription = document.getElementById('cheatDescription').value;
-
-        const report = {
-            playerName,
-            platform,
-            cheatDescription,
-            date: new Date().toLocaleString()
-        };
-
-        addReportToList(report);
-        saveReport(report);
-
-        this.reset();
-    });
+    this.reset();
 });
 
-function updateTexts(language) {
-    const texts = translations[language];
-
-    if (!texts) {
-        console.error(`Übersetzung für Sprache '${language}' nicht verfügbar.`);
-        return;
-    }
-
-    document.getElementById('title').textContent = texts.title;
-    document.getElementById('reportTitle').textContent = texts.reportTitle;
-    document.getElementById('playerNameLabel').textContent = texts.playerNameLabel;
-    document.getElementById('platformLabel').textContent = texts.platformLabel;
-    document.getElementById('cheatDescriptionLabel').textContent = texts.cheatDescriptionLabel;
-    document.getElementById('submitButton').textContent = texts.submitButton;
-    document.getElementById('reportsTitle').textContent = texts.reportsTitle;
-    document.getElementById('thankYouText').textContent = texts.thankYouText;
+function addReportToList(report) {
+    const reportList = document.getElementById('reportList');
+    const listItem = document.createElement('li');
+    listItem.textContent = `Spielername: ${report.playerName} | Plattform: ${report.platform} | Cheat: ${report.cheatDescription} | Datum: ${report.date}`;
+    reportList.appendChild(listItem);
 }
+
+function saveReport(report) {
+    let reports = JSON.parse(localStorage.getItem('cheaterReports')) || [];
+    reports.push(report);
+    localStorage.setItem('cheaterReports', JSON.stringify(reports));
+}
+
+function loadReports() {
+    const reports = JSON.parse(localStorage.getItem('cheaterReports')) || [];
+    reports.forEach(report => addReportToList(report));
+}
+
+document.addEventListener('DOMContentLoaded', loadReports);
 
 const translations = {
     de: {
@@ -92,19 +82,16 @@ const translations = {
     }
 };
 
-function addReportToList(report) {
-    const reportList = document.getElementById('reportList');
-    const listItem = document.createElement('li');
-    listItem.textContent = `Spielername: ${report.playerName} | Plattform: ${report.platform} | Cheat: ${report.cheatDescription} | Datum: ${report.date}`;
-    reportList.appendChild(listItem);
-}
+document.getElementById('languageSelect').addEventListener('change', function(event) {
+    const language = event.target.value;
+    const texts = translations[language];
 
-function saveReport(report) {
-    let reports = JSON.parse(localStorage.getItem('cheaterReports')) || [];
-    reports.push(report);
-    localStorage.setItem('cheaterReports', JSON.stringify(reports));
-}
-
-function loadReports() {
-    const reports = JSON.parse(localStorage.getItem('cheaterReports')) || [];
-    reports.forEach(report => addReportToList
+    document.getElementById('title').textContent = texts.title;
+    document.getElementById('reportTitle').textContent = texts.reportTitle;
+    document.getElementById('playerNameLabel').textContent = texts.playerNameLabel;
+    document.getElementById('platformLabel').textContent = texts.platformLabel;
+    document.getElementById('cheatDescriptionLabel').textContent = texts.cheatDescriptionLabel;
+    document.getElementById('submitButton').textContent = texts.submitButton;
+    document.getElementById('reportsTitle').textContent = texts.reportsTitle;
+    document.getElementById('thankYouText').textContent = texts.thankYouText;
+});
