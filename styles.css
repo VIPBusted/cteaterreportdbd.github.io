@@ -14,7 +14,7 @@ header {
 }
 
 #websiteLogo {
-    width: 30px;
+    width: 30px; /* Angepasste Größe für das Logo */
     height: auto;
     position: absolute;
     top: 50%;
