@@ -59,26 +59,6 @@ const translations = {
         submitButton: "Report",
         reportsTitle: "Reported Cheaters",
         thankYouText: "Thank YOU Kuriboh and MakerErbauer2!"
-    },
-    es: {
-        title: "Reportar tramposo de Dead by Daylight",
-        reportTitle: "Reportar tramposo",
-        playerNameLabel: "Nombre del jugador:",
-        platformLabel: "Plataforma:",
-        cheatDescriptionLabel: "Descripción del truco:",
-        submitButton: "Reportar",
-        reportsTitle: "Tramposos reportados",
-        thankYouText: "Thank YOU Kuriboh and MakerErbauer2!"
-    },
-    fr: {
-        title: "Signaler un tricheur de Dead by Daylight",
-        reportTitle: "Signaler un tricheur",
-        playerNameLabel: "Nom du joueur:",
-        platformLabel: "Plateforme:",
-        cheatDescriptionLabel: "Description de la triche:",
-        submitButton: "Signaler",
-        reportsTitle: "Tricheurs signalés",
-        thankYouText: "Thank YOU Kuriboh and MakerErbauer2!"
     }
 };
 
